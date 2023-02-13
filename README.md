@@ -1,2 +1,2 @@
-# BC-Grupal03
+# ABPro - Bootcamp UNAB
 Sitio web de tienda digital, encargo grupal de Bootcamp UNAB
