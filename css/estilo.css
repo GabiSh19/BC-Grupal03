@@ -1,0 +1,108 @@
+/* Generales */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Elementos */
+
+.button {
+    display: block;
+    margin: 0 2em;
+    text-align: center;
+}
+
+ .wrapper--green {
+    background-color: rgba(0, 175, 145, 0.1);
+}
+
+/* Section*/
+
+.section {
+    padding: 4rem 2rem;
+}
+
+.section__img {
+    padding-bottom: 2em;
+    max-width: 500px;
+    display: block;
+    margin: auto;
+}
+
+.section__h2, .section__h3 {
+    padding-bottom: 1.5em;
+    text-align: center;
+}
+
+.section__p {
+    text-align: center;
+}
+
+/* Catalogo y Galeria */
+
+.catalogo {
+    margin-bottom: 4em;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+
+
+/* Media Queries */
+
+/* Tablet 768px */
+
+@media screen and (min-width: 768px){
+    .section {
+        max-width: 80%;
+        margin:  0 auto;
+    }
+
+    .section__p, .section__h2, .section__h3 {
+        width: 80%;
+        margin: auto;
+    }
+}
+
+/* Tablet 1200px */
+
+
+@media screen and (min-width: 1200px){
+
+    .section {
+        max-width: 1200px;
+    }
+
+    .section__p, .section__h2, .section__h3 {
+        width: 60%;
+    }
+
+    .section--2col {
+        padding: 4em 0;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .section__h2--responsiveleft {
+        text-align:left;
+    }
+
+    .section__p--responsiveleft {
+        text-align:left;
+    }
+}

@@ -5,15 +5,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cachureando Store</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/estilo.css">
   <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
   <link rel="manifest" href="./img/favicon/site.webmanifest">
-  <script src="./js/main.js" defer></script>
-
+  
+<!--   <script src="./js/main.js" defer></script>
+ -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -49,76 +51,62 @@
   </nav>
 
   <main>
-    <section id="quienesomos">
-      <img class="modificar" src="./img/somos.svg" alt="Imagen de Somos">
-      <h2>Quiénes Somos</h2>
-      <p>Somos una empresa dedicada a la venta de productos con estilo,
+    <section class="section">
+      <img class="img section__img" src="./img/somos.svg" alt="Imagen de Somos">
+      <h2 class="section__h2">Quiénes Somos</h2>
+      <p class="section__p">Somos una empresa dedicada a la venta de productos con estilo,
         conformado por un equipo de jóvenes con ganas de entregar
         productos únicos e impresionantes para quienes busquen algo
         irrepetible y personalizado</p>
     </section>
 
-    <section id="envios" class="js-scroll fade-in-bottom">
-      <img class="modificar" src="./img/envios.svg" alt="Imagen de Somos">
-      <h2>Envíos</h2>
-      <p>Nuestros envíos son realizados a través de Chilexpress y
-         Starken, empaquetados firmemente para que tus productos
-         lleguen intactos y seguros a tu hogar. Puedes realizar
-         seguimientos para cada uno de tus envíos utilizando el código que te enviaremos a tu correo electrónico
-      </p>
-    </section>
+<div class="wrapper--green">
+  <section class="section">
+    <img class="img section__img" src="./img/envios.svg" alt="Imagen de Somos">
+    <h2 class="section__h2">Envíos</h2>
+    <p class="section__p">Nuestros envíos son realizados a través de Chilexpress y
+       Starken, empaquetados firmemente para que tus productos
+       lleguen intactos y seguros a tu hogar. Puedes realizar
+       seguimientos para cada uno de tus envíos utilizando el código que te enviaremos a tu correo electrónico
+    </p>
+  </section>
 
-    <section id="catalogo">
-      <div class="row py-5 text-center ">
+</div>
+    
+
+    <section class="section section--2col">
 
         <!-- columna texto -->
-        <div class="modificar js-scroll slide-left">
-          <h2>Catálogo</h2>
-          <p>Echa un vistazo a nuestros productos principales, elaborados utilizando procesos sustentables y manuales,
+        <div class="catalogo">
+          <h2 class="section__h2 section__h2--responsiveleft">Catálogo</h2>
+          <p class="section__p section__p--responsiveleft">Echa un vistazo a nuestros productos principales, elaborados utilizando procesos sustentables y manuales,
               con materiales de alta calidad que garantizan duración, excelencia. Con estilos que no encontrarás en
               otras tiendas. Si deseas personalizar tus productos, no dudes en contactarnos.</p>
         </div>
 
         <!-- columna fotos -->
-        <div class="modificar js-scroll slide-right">
-            <div class="producto1">
-              <figure>
-                <img src="./img/p01.jpg" class="modificar" alt="Producto 01">
-              </figure>
-            </div>
-            <div class="producto2">
-              <figure>
-                <img src="./img/p02.jpg" class="modificar" alt="Producto 02">
-              </figure>
-            </div>
-            <div class="producto3">
-              <figure>
-                <img src="./img/p03.jpg" class="modificar" alt="Producto 03">
-              </figure>
-            </div>
-            <div class="producto4">
-              <figure>
-                <img src="./img/p04.jpg" class="modificar" alt="Producto 04">
-              </figure>
+        <div class="galeria">
+                <img src="./img/p01.jpg" class="galeria__img" alt="Producto 01">
+                <img src="./img/p02.jpg" class="galeria__img" alt="Producto 02">              
+                <img src="./img/p03.jpg" class="galeria__img" alt="Producto 03">
+                <img src="./img/p04.jpg" class="galeria__img" alt="Producto 04">
             </div>
         </div>
     </section>
 
+<div class="wrapper--green">
+  <section class="section">
+    <h3 class="section__h3">¿Quieres más información?</h3>
+    <a class="button section__button" href="./formulario.html">
+      ¡Hablemos!
+    </a>
+  </section>
+</div>
+    
 
-    <section id="contacto" class="modificar js-scroll fade-in-bottom">
-      <div class="modificar">
-        <h3>¿Quieres más información?</h3>
-      </div>
-      <div class="modificar">
-        <a class="btn" href="./formulario.html">
-          ¡Hablemos!
-        </a>
-      </div>
-    </section>
-
-    <section id="calificacion" class="js-scroll fade-in-bottom">
-      <h3>Del 1 al 10 ¿Cómo evalúas nuestro servicio?</h3>
-      <div class="formulario ">
+    <section class="section">
+      <h3 class="section__h3">Del 1 al 10 ¿Cómo evalúas nuestro servicio?</h3>
+      <div class="formulario">
         <form id="inputrange">
           <div id="rangeslider" data-role="rangeslider">
             <input type="range" id="nota" min="0" max="10" value="10"
@@ -154,14 +142,9 @@
 
   </footer>
 
-
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-    crossorigin="anonymous"></script>
   <!-- Link JS jQuery -->
-  <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
-  <script src="./js/jquery.goup.js"></script>
+<!--   <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+  <script src="./js/jquery.goup.js"></script> -->
 </body>
 
 </html>
