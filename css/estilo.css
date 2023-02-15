@@ -12,6 +12,10 @@ body {
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
+input, textarea, button {
+    all: unset;
+  }
+
 img {
     max-width: 100%;
 }
@@ -50,6 +54,13 @@ img {
     text-align: center;
 }
 
+.section--2colmobile {
+    padding: 4em 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-start: 4;
+}
+
 /* Catalogo y Galeria */
 
 .catalogo {
@@ -62,6 +73,31 @@ img {
     gap: 5px;
 }
 
+/* Formulario */
+
+.form {
+    width: 90%;
+    margin: 2em auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+}
+
+.displaynone {
+    display: none;
+}
+
+.form__input, .form__textarea {
+    width: 100%;
+    border: 1px #dee2e6 solid;
+    padding: .75em;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.form__button {
+    border: ;
+}
 
 /* Media Queries */
 
