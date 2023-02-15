@@ -31,6 +31,8 @@ img {
     display: block;
     margin: 0 2em;
     text-align: center;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 
  .wrapper--green {
@@ -82,15 +84,11 @@ section h2::after {
 /* Formulario */
 
 .form {
-    width: 90%;
+    width: 100%;
     margin: 2em auto;
     display: grid;
     grid-template-columns: 1fr;
     gap: 1em;
-}
-
-.displaynone {
-    display: none;
 }
 
 .form__input, .form__textarea {
@@ -102,7 +100,15 @@ section h2::after {
 }
 
 .form__button {
-    border: ;
+    border: 2px solid var(--green);
+    padding: 1em;
+    color: var(--green);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    width: 100%;
+    margin: auto;
+
 }
 
 /* Media Queries */
@@ -111,7 +117,7 @@ section h2::after {
 
 @media screen and (min-width: 768px){
     .section {
-        max-width: 80%;
+        max-width: 90%;
         margin:  0 auto;
     }
 
@@ -122,6 +128,22 @@ section h2::after {
 
     section h2::after {
         width: 15%;
+    }
+
+    .form {
+        grid-template-columns: 1fr 1fr;
+        gap: 1em;
+        max-width: 100%;
+    }
+
+    .form__textarea {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .form__button {
+        width: 70%;
+        margin: 0;
     }
 
 }
@@ -152,6 +174,12 @@ section h2::after {
         text-align:left;
     }
 
+    .form {
+        max-width: 80%;
+    }
     
+    .form__button {
+        max-width: 50%;
+    }
 
 }
