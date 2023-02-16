@@ -107,7 +107,7 @@ const elementInView = (el, dividend = 1) => {
 // Validacion Formulario
 
 function validateForm() {
-  const regExNombre = /^([a-z ñáéíóú]{2,60})$/i;
+  const regExName = /^([a-z ñáéíóú]{2,60})$/i;
 	const regExEmail =  /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,4})+$/;
   const regExPhone = /[0-9]$/;
   let inputName = document.querySelector("#form-name").value;
@@ -119,7 +119,7 @@ function validateForm() {
 
   if (!inputName) {
     alert('Ingrese Nombre Completo');
-  } else if (!regExNombre.test(inputName)) {
+  } else if (!regExName.test(inputName)) {
     alert('El nombre solo debe contener letras');
   } else if (!inputPhone) {
     alert('Ingrese Telefono');
