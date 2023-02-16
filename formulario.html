@@ -21,33 +21,34 @@
 
 <body>
 
-    <header class="modificar">
-        <img id="logo" class="modificar" src="./img/logo.svg" width="200" alt="Logo Cachureos">
-    </header>
-
-    <nav class="modificar" role="navigation">
-        <a class="modificar" href="./index.html">
-        <img id="logo-collapsed" src="./img/logo-collapsed.svg" alt="Logo Pequeño" width="30"> Cachureando
-        </a>
-
-        <button class="modificar" type="button">
-            <span class="modificar"></span>
-        </button>
-
-        <div class="modificar" id="menucollapse">
-            <ul class="modificar">
-                <li class="modificar">
-                    <a class="modificar" aria-current="page" href="#">Inicio</a>
-                </li>
-                <li class="modificar">
-                    <a class="modificar" href="./index.html#quienesomos">Somos</a>
-                </li>
-                <li class="modificar">
-                    <a class="modificar" href="./formulario.html">Contacto</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+<!-- Header -->
+<header class="header">
+    <div class="header__element">
+      <a class="header__link" href="./index.html">
+        <img class="header__icon" id="logo-collapsed" src="./img/logo-collapsed.svg" alt="Logo Pequeño" width="30"> 
+        <h1 class="header__title">Cachureando</h1> 
+      </a>
+    </div>
+    <img  class="header__logo" src="./img/logo.svg" width="200" alt="Logo Cachureos">
+    <div class="header__element">
+      <button id="burger"><img  src="./img/burger.svg" width="20px" alt="burger"></button>
+  </div>
+  </header>
+  
+  <!--  nav -->
+  <nav class="nav" role="navigation">
+      <ul class="nav__list nav__list--hide" id="menu">
+        <li class="nav__item">
+          <a class="nav__link" aria-current="page" href="./index.html">Inicio</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="./index.html#quienessomos">Somos</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link--active" href="./formulario.html">Contacto</a>
+        </li>
+      </ul>
+  </nav>
 
     <main>
         <section class="section">

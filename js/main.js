@@ -1,3 +1,13 @@
+// Funcion menu desplegable nav
+let list =document.getElementById("menu");
+let button=document.getElementById("burger");
+function toggle() {
+  list.classList.toggle("nav__list--show");
+}
+
+button.addEventListener("click",toggle);
+
+
 // Funcion de Jquery para boton back to top
 
 $(document).ready(function () {
