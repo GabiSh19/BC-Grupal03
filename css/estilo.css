@@ -229,7 +229,7 @@ font-size: 15px;
    
 }
    
-#year{
+.footer__date-flex{
     color: var(--green);
     font-weight: 700;
     display: flex;
@@ -349,7 +349,7 @@ font-size: 15px;
        
         }
     
-    #year{
+    .footer__date-flex{
     
         color: var(--green);
         font-weight: 700;
@@ -431,7 +431,7 @@ font-size: 15px;
         flex-direction:row;
         }
     
-    #year{
+    .footer__date-flex{
         color: var(--green);
         font-weight: 700;
         display: flex;
