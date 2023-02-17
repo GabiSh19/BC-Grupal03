@@ -1,57 +1,57 @@
 <!doctype html>
 <html lang="es">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Cachureando Store</title>
+  <title>Cachureando Store - Inicio</title>
   <link rel="stylesheet" href="./css/estilo.css">
+  <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
   <link rel="manifest" href="./img/favicon/site.webmanifest">
-  
-<!--   <script src="./js/main.js" defer></script>
- -->
+<!-- Google Fonts -->
  <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+<!-- JS -->
+<script src="./js/main.js" defer></script>
 </head>
 
 <body>
 
-  <header class="modificar">
-    <img id="logo" class="modificar" src="./img/logo.svg" width="200" alt="Logo Cachureos">
-  </header>
-
-
-
-  <nav class="modificar" role="navigation">
-    <a class="modificar" href="./index.html">
-      <img id="logo-collapsed" src="./img/logo-collapsed.svg" alt="Logo Pequeño" width="30"> Cachureando
+<!-- Header -->
+<header class="header">
+  <div class="header__element">
+    <a class="header__link" href="./index.html">
+      <img class="header__icon" id="logo-collapsed" src="./img/logo-collapsed.svg" alt="Logo Pequeño" width="30"> 
+      <h1 class="header__title">Cachureando</h1> 
     </a>
+  </div>
+  <img  class="header__logo" src="./img/logo.svg" width="200" alt="Logo Cachureos">
+  <div class="header__element">
+    <button id="burger"><img  src="./img/burger.svg" width="20px" alt="burger"></button>
+</div>
+</header>
 
-    <button class="modificar" type="button">
-      <span class="modificar"></span>
-    </button>
+<!--  nav -->
+<nav class="nav" role="navigation">
+    <ul class="nav__list nav__list--hide" id="menu">
+      <li class="nav__item">
+        <a class="nav__link--active" aria-current="page" href="#">Inicio</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="./index.html#quienessomos">Somos</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="./formulario.html">Contacto</a>
+      </li>
+    </ul>
+</nav>
 
-    <div class="modificar" id="menucollapse">
-      <ul class="modificar">
-        <li class="modificar">
-          <a class="modificar" aria-current="page" href="#">Inicio</a>
-        </li>
-        <li class="modificar">
-          <a class="modificar" href="./index.html#quienesomos">Somos</a>
-        </li>
-        <li class="modificar">
-          <a class="modificar" href="./formulario.html">Contacto</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
 
   <main>
-    <section class="section">
+    <section class="section" id="quienessomos">
       <img class="img section__img" src="./img/somos.svg" alt="Imagen de Somos">
       <h2 class="section__h2">Quiénes Somos</h2>
       <p class="section__p">Somos una empresa dedicada a la venta de productos con estilo,
@@ -65,9 +65,9 @@
     <img class="img section__img" src="./img/envios.svg" alt="Imagen de Somos">
     <h2 class="section__h2">Envíos</h2>
     <p class="section__p">Nuestros envíos son realizados a través de Chilexpress y
-       Starken, empaquetados firmemente para que tus productos
-       lleguen intactos y seguros a tu hogar. Puedes realizar
-       seguimientos para cada uno de tus envíos utilizando el código que te enviaremos a tu correo electrónico
+      Starken, empaquetados firmemente para que tus productos
+      lleguen intactos y seguros a tu hogar. Puedes realizar
+      seguimientos para cada uno de tus envíos utilizando el código que te enviaremos a tu correo electrónico
     </p>
   </section>
 
@@ -97,33 +97,28 @@
 <div class="wrapper--green">
   <section class="section">
     <h3 class="section__h3">¿Quieres más información?</h3>
-    <a class="button section__button" href="./formulario.html">
+    <button class="button button--primary" href="./formulario.html">
       ¡Hablemos!
-    </a>
+    </button>
   </section>
 </div>
     
 
     <section class="section">
       <h3 class="section__h3">Del 1 al 10 ¿Cómo evalúas nuestro servicio?</h3>
-      <div class="formulario">
-        <form id="inputrange">
-          <div id="rangeslider" data-role="rangeslider">
-            <input type="range" id="nota" min="0" max="10" value="10"
-              oninput="this.nextElementSibling.value = this.value">
-            <output>10</output>
-          </div>
-        </form>
-      </div>
-          <!--Calificación sin jQuery           
-          <div class="col-12 col-md-7 mx-auto">
-            <input type="text" id="nota" placeholder="Ingrese una calificación">
-          </div> -->
-          <div class="modificar">
-            <button onclick="calificar()">ENVIAR</button>
-          </div>
-          <div class="result " id="result"> </div>
-          <div class="numresult" id="numresult"> </div>
+        <!-- Calificación con Bootstrap  -->
+      <!-- <form class= "section__form"id="inputrange" >
+        <div id="rangeslider" data-role="rangeslider">
+          <input type="range" id="nota" min="0" max="10" value="10"
+            oninput="this.nextElementSibling.value = this.value">
+          <output>10</output>
+        </div>
+      </form> -->
+          <!-- Calificación sin jQuery -->
+      <input class = "section__input" type="text" id="qual" placeholder="Ingrese una calificación">
+      <button onclick="calificar()" class="button button--secondary">ENVIAR</button>
+      <div class="section__result" id="result"> </div>
+      <div class="section__numresult" id="numresult"> </div>
     </section>
 
   </main>
@@ -143,8 +138,8 @@
   </footer>
 
   <!-- Link JS jQuery -->
-<!--   <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
-  <script src="./js/jquery.goup.js"></script> -->
+  <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+  <script src="./js/jquery.goup.js"></script>
 </body>
 
 </html>

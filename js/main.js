@@ -1,3 +1,13 @@
+// Funcion menu desplegable nav
+let list =document.getElementById("menu");
+let button=document.getElementById("burger");
+function toggle() {
+  list.classList.toggle("nav__list--show");
+}
+
+button.addEventListener("click",toggle);
+
+
 // Funcion de Jquery para boton back to top
 
 $(document).ready(function () {
@@ -30,8 +40,7 @@ fecha.textContent = fechaActual;
 // Funcion para calificar
 
 function calificar(){
-    let num = parseInt(document.getElementById("nota").value);
-
+    let num = parseInt(document.querySelector("#qual").value);
     let text;
     switch (true){
         case num>= 0 && num<3 :
@@ -57,13 +66,18 @@ function calificar(){
     }
     
     if (num >= 0 && num <= 10) { // Condicional para el texto
-        document.querySelector(".result").textContent= "Nuestro servicio está: " + text;
-        document.querySelector(".numresult").textContent = "Tu calificación fue de: " + num;
+        document.querySelector(".section__result").textContent= "Nuestro servicio está: " + text;
+        document.querySelector(".section__numresult").textContent = "Tu calificación fue de: " + num;
     } else { // Elimina el resultado anterior si se ingresa un número fuera del rango o algo que no sea un número
-        document.querySelector(".numresult").textContent = "";
-        document.querySelector(".result").textContent= "Ingrese un número válido";
+        document.querySelector(".section__numresult").textContent = "";
+        document.querySelector(".section__result").textContent= "Ingrese un número válido";
     }
 }
+
+
+
+//Función para animaciones 
+
 const scrollElements = document.querySelectorAll(".js-scroll");
 const elementInView = (el, dividend = 1) => {
     const elementTop = el.getBoundingClientRect().top;
@@ -103,3 +117,38 @@ const elementInView = (el, dividend = 1) => {
   window.addEventListener("scroll", () => { 
     handleScrollAnimation();
   });
+
+// Validacion Formulario
+
+function validateForm() {
+  const regExName = /^([a-z ñáéíóú]{2,60})$/i;
+	const regExEmail =  /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,4})+$/;
+  const regExPhone = /[0-9]$/;
+  let inputName = document.querySelector("#form-name").value;
+  let inputPhone = document.querySelector("#form-phone").value;
+  let inputEmail = document.querySelector("#form-email").value;
+  let inputAddress = document.querySelector("#form-address").value;
+  let inputText = document.querySelector("#form-text").value;
+  
+
+  if (!inputName) {
+    alert('Ingrese Nombre Completo');
+  } else if (!regExName.test(inputName)) {
+    alert('El nombre solo debe contener letras');
+  } else if (!inputPhone) {
+    alert('Ingrese Telefono');
+  } else if (!regExPhone.test(inputPhone)) {
+    alert('El telefono solo debe contener numeros');
+  } else if (!inputEmail) {
+    alert('Ingrese Email');
+  } else if (!regExEmail.test(inputEmail)) {
+    alert('El formato de email no cumple los requisitos ej: mail@ejemplo.com')
+  } else if (!inputAddress) {
+    alert('Ingrese Direccion');
+  } else if (!inputText) {
+    alert('Ingrese su pedido en la caja de texto');
+  }
+}
+
+const buttonSubmit = document.querySelector("#form-submit");
+buttonSubmit.addEventListener('click', validateForm)
