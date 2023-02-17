@@ -357,6 +357,10 @@ font-size: 15px;
         font-size: 110%;
     }
 
+    .section__input{
+        font-size: 110%;
+    }
+
     /* Cambios footer */
     .footer__listgroup {
         flex-direction:row;       
