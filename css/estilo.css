@@ -204,6 +204,40 @@ font-size: 15px;
     letter-spacing: 1px;
     margin-bottom: 1em;
 }
+ /*Footer*/
+
+ .footer{
+    background-color: #3f3f3f;
+    color: white;
+    font-weight: 200;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding-top: 3em;
+    flex-direction: column;
+}
+.footer__list-group{
+
+    background-color: #3f3f3f;
+    color: white;
+    font-weight: 200;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction:column;
+    gap: 1em;
+   
+}
+   
+.footer__date-flex{
+    color: var(--green);
+    font-weight: 700;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding-top: 2em;
+    padding-bottom: 2em;
+   }
 
 /* Formulario */
 
@@ -229,6 +263,7 @@ font-size: 15px;
     margin: auto;
     box-sizing: border-box;
 }
+
 
 /* Media Queries */
 
@@ -293,7 +328,36 @@ font-size: 15px;
     .button{
         max-width: 50%;
     }
-
+    .footer{
+        background-color: #3f3f3f;
+        color: white;
+        font-weight: 200;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+       }
+        
+        .footer__list-group{
+        background-color: #3f3f3f;
+        color: white;
+        font-weight: 200;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        flex-direction:row;
+        gap: 1em;
+       
+        }
+    
+    .footer__date-flex{
+    
+        color: var(--green);
+        font-weight: 700;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        padding-bottom: 3em;
+       }
     .form {
         grid-template-columns: 1fr 1fr;
         gap: 1em;
@@ -346,7 +410,36 @@ font-size: 15px;
     .button{
         max-width: 50%;
     }
-
+    .footer{
+        background-color: #3f3f3f;
+        color: white;
+        font-weight: 200;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        gap: 1em;
+    
+       }
+        
+        .footer__item{
+        background-color: #3f3f3f;
+        color: white;
+        font-weight: 200;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        flex-direction:row;
+        }
+    
+    .footer__date-flex{
+        color: var(--green);
+        font-weight: 700;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        padding-bottom: 3em;
+       }
+    
     .form {
         max-width: 80%;
     }
