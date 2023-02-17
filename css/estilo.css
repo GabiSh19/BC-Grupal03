@@ -186,7 +186,7 @@ font-size: 15px;
 
 .section__input{
     border-bottom: 2px solid var(--green);
-    font-size: 120%;
+    font-size: 90%;
     color: rgba(0, 0, 0, 0.7);
 }
 
@@ -340,6 +340,10 @@ font-size: 15px;
         max-width: 50%;
     }
 
+    .section__input{
+        font-size: 110%;
+    }
+
     .footer__listgroup {
         flex-direction:row;       
     }
@@ -396,7 +400,11 @@ font-size: 15px;
     .button{
         max-width: 50%;
     }
-       
+    
+    .section__input{
+        font-size: 120%;
+    }
+
     .footer__year {
         padding-bottom: 3em;
        }
