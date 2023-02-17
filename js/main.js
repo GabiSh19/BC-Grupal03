@@ -1,4 +1,5 @@
 // Funcion menu desplegable nav
+
 let list =document.getElementById("menu");
 let button=document.getElementById("burger");
 function toggle() {
@@ -18,6 +19,7 @@ $(document).ready(function () {
   });
 });
 
+
 // Funcion del tiempo con intervalos de 1000ms
 
 setInterval(() =>{
@@ -33,9 +35,8 @@ let segundos = ('0' + muestraFecha.getSeconds()).slice(-2);
 let fechaActual = `${dia}/${mes}/${ano} - ${hora}:${minutos}:${segundos}`
 fecha.textContent = fechaActual;
 
-
-
 }, 1000)
+
 
 // Funcion para calificar
 

@@ -25,6 +25,7 @@ img {
     max-width: 100%;
 }
 
+
 /* Elementos */
 
 .button {
@@ -72,6 +73,7 @@ img {
     gap: 1em;
 }
 
+
 /* header */
 
 .header{
@@ -107,6 +109,8 @@ font-size: 15px;
 .header__icon{
     margin: 0px 15px 0px 0px;
 }
+
+
 /* nav */
 
 .nav__list{
@@ -136,7 +140,7 @@ font-size: 15px;
 }
 
 
-/* Section*/
+/* Main */
 
 .section {
     padding: 4rem 2rem;
@@ -151,11 +155,11 @@ font-size: 15px;
     margin: auto;
 }
 
-.section__h2, .section__h3 {
+.section__title, .section__subtitle {
     padding-bottom: 1.5em;
 }
 
-.section__h2::after {
+.section__title::after {
     content: "";
     display: block;
     margin: 0 auto;
@@ -164,11 +168,12 @@ font-size: 15px;
     border-bottom: 5px solid var(--green);
 }
 
-.section__h3 {
+.section__subtitle {
     font-size: 1.5rem;
     font-weight: 400;
     margin: 1em 0;
 }
+
 
 /* Catalogo y Galeria */
 
@@ -181,6 +186,7 @@ font-size: 15px;
     grid-template-columns: 1fr 1fr;
     gap: 5px;
 }
+
 
 /* Calificación */
 
@@ -204,6 +210,34 @@ font-size: 15px;
     letter-spacing: 1px;
     margin-bottom: 1em;
 }
+
+
+/* Formulario */
+
+.form {
+    width: 100%;
+    margin: 2em auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+}
+
+.form__input, .form__textarea {
+    width: 100%;
+    border: 1px #dee2e6 solid;
+    padding: .75em;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.form__button {
+    padding: 1em;
+    width: 100%;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+
  /*Footer*/
 
  .footer{
@@ -239,7 +273,7 @@ font-size: 15px;
     padding-bottom: 2em;
    }
 
-   .footer__item{
+.footer__item {
     background-color: #3f3f3f;
     color: white;
     font-weight: 200;
@@ -247,32 +281,6 @@ font-size: 15px;
     text-align: center;
     display: flex;
     flex-direction:row;
-    }
-
-
-/* Formulario */
-
-.form {
-    width: 100%;
-    margin: 2em auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1em;
-}
-
-.form__input, .form__textarea {
-    width: 100%;
-    border: 1px #dee2e6 solid;
-    padding: .75em;
-    box-sizing: border-box;
-    border-radius: 5px;
-}
-
-.form__button {
-    padding: 1em;
-    width: 100%;
-    margin: auto;
-    box-sizing: border-box;
 }
 
 
@@ -282,6 +290,13 @@ font-size: 15px;
 
 @media screen and (min-width: 768px){
 
+    /* Cambios generales */
+    .button{
+        max-width: 50%;
+    }
+
+
+    /* Cambios header */
     .header{
         justify-content: center;
         border-bottom: none;
@@ -296,6 +311,7 @@ font-size: 15px;
         display: none;
     }
 
+    /* Cambios nav */
     .nav{
         border-bottom: 1px solid var(--green);
         padding: 15px 0px;
@@ -322,28 +338,30 @@ font-size: 15px;
         color:var(--green);
     }
 
+    /* Cambios main */
     .section {
         max-width: 90%;
         margin:  0 auto
     }
 
-    .section__p, .section__h2, .section__h3 {
+    .section__text, .section__title, .section__subtitle {
         width: 80%;
         margin: auto;
     }
 
-    .section__h2::after {
+    .section__title::after {
         width: 15%;
-    }
-
-    .button{
-        max-width: 50%;
     }
 
     .section__input{
         font-size: 110%;
     }
 
+    .section__input{
+        font-size: 110%;
+    }
+
+    /* Cambios footer */
     .footer__listgroup {
         flex-direction:row;       
     }
@@ -366,15 +384,22 @@ font-size: 15px;
 
 }
 
+
 /* Desktop 1200px */
 
 @media screen and (min-width: 1200px){
 
+    /* Cambios generales */
+    .button{
+        max-width: 50%;
+    }
+
+    /* Cambios main */
     .section {
         max-width: 1200px;
     }
 
-    .section__p, .section__h2, .section__h3 {
+    .section__text, .section__title, .section__subtitle {
         width: 60%;
     }
 
@@ -384,31 +409,30 @@ font-size: 15px;
         grid-template-columns: 1fr 2fr;
     }
 
-    .section__h2--responsiveleft {
+    .section__title--responsiveleft {
         text-align:left;
     }
 
-    .section__h2--responsiveleft::after{
+    .section__title--responsiveleft::after{
         margin: 0;
         width: 2em;
     }
 
-    .section__p--responsiveleft {
+    .section__text--responsiveleft {
         text-align:left;
     }
 
-    .button{
-        max-width: 50%;
-    }
     
     .section__input{
         font-size: 120%;
     }
 
+    /* Cambios footer */
     .footer__year {
         padding-bottom: 3em;
        }
     
+    /* Cambios form */
     .form {
         max-width: 80%;
     }

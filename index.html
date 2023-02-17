@@ -49,65 +49,65 @@
     </ul>
 </nav>
 
-
+<!-- Main -->
   <main>
+
+    <!--   Quienes somos -->
     <section class="section" id="quienessomos">
       <img class="img section__img" src="./img/somos.svg" alt="Imagen de Somos">
-      <h2 class="section__h2">Quiénes Somos</h2>
-      <p class="section__p">Somos una empresa dedicada a la venta de productos con estilo,
+      <h2 class="section__title">Quiénes Somos</h2>
+      <p class="section__text">Somos una empresa dedicada a la venta de productos con estilo,
         conformado por un equipo de jóvenes con ganas de entregar
         productos únicos e impresionantes para quienes busquen algo
         irrepetible y personalizado</p>
     </section>
 
-<div class="wrapper--green">
-  <section class="section">
-    <img class="img section__img" src="./img/envios.svg" alt="Imagen de Somos">
-    <h2 class="section__h2">Envíos</h2>
-    <p class="section__p">Nuestros envíos son realizados a través de Chilexpress y
-      Starken, empaquetados firmemente para que tus productos
-      lleguen intactos y seguros a tu hogar. Puedes realizar
-      seguimientos para cada uno de tus envíos utilizando el código que te enviaremos a tu correo electrónico
-    </p>
-  </section>
-
-</div>
+    <!--     Envios -->
+    <div class="wrapper--green">
+      <section class="section">
+        <img class="img section__img" src="./img/envios.svg" alt="Imagen de Somos">
+        <h2 class="section__title">Envíos</h2>
+        <p class="section__text">Nuestros envíos son realizados a través de Chilexpress y
+          Starken, empaquetados firmemente para que tus productos
+          lleguen intactos y seguros a tu hogar. Puedes realizar
+          seguimientos para cada uno de tus envíos utilizando el código que te enviaremos a tu correo electrónico
+        </p>
+      </section>
+    </div>
     
-
+<!-- Catalogo -->
     <section class="section section--2col">
 
         <!-- columna texto -->
         <div class="catalogo">
-          <h2 class="section__h2 section__h2--responsiveleft">Catálogo</h2>
-          <p class="section__p section__p--responsiveleft">Echa un vistazo a nuestros productos principales, elaborados utilizando procesos sustentables y manuales,
+          <h2 class="section__title section__title--responsiveleft">Catálogo</h2>
+          <p class="section__text section__text--responsiveleft">Echa un vistazo a nuestros productos principales, elaborados utilizando procesos sustentables y manuales,
               con materiales de alta calidad que garantizan duración, excelencia. Con estilos que no encontrarás en
               otras tiendas. Si deseas personalizar tus productos, no dudes en contactarnos.</p>
         </div>
 
         <!-- columna fotos -->
         <div class="galeria">
-                <img src="./img/p01.jpg" class="galeria__img" alt="Producto 01">
-                <img src="./img/p02.jpg" class="galeria__img" alt="Producto 02">              
-                <img src="./img/p03.jpg" class="galeria__img" alt="Producto 03">
-                <img src="./img/p04.jpg" class="galeria__img" alt="Producto 04">
+                <img src="./img/p01.jpg" class="img galeria__img" alt="Producto 01">
+                <img src="./img/p02.jpg" class="img galeria__img" alt="Producto 02">              
+                <img src="./img/p03.jpg" class="img galeria__img" alt="Producto 03">
+                <img src="./img/p04.jpg" class="img galeria__img" alt="Producto 04">
             </div>
         </div>
     </section>
 
 <div class="wrapper--green">
   <section class="section">
-    <form method="get" action="./formulario.html">
       <h3 class="section__h3">¿Quieres más información?</h3>
-      <button class="button button--primary" href="./formulario.html">
+      <a class="button button--primary" href="./formulario.html">
         ¡Hablemos!
-      </button>
-    </form>
+      </a>
   </section>
 </div>
     
-
+<!-- Calificacion -->
     <section class="section">
-      <h3 class="section__h3">Del 1 al 10 ¿Cómo evalúas nuestro servicio?</h3>
+      <h3 class="section__subtitle">Del 1 al 10 ¿Cómo evalúas nuestro servicio?</h3>
         <!-- Calificación con Bootstrap  -->
       <!-- <form class= "section__form"id="inputrange" >
         <div id="rangeslider" data-role="rangeslider">
@@ -116,7 +116,8 @@
           <output>10</output>
         </div>
       </form> -->
-          <!-- Calificación sin jQuery -->
+
+      <!-- Calificación sin jQuery -->
       <input class = "section__input" type="text" id="qual" placeholder="Ingrese una calificación">
       <button onclick="calificar()" class="button button--secondary">ENVIAR</button>
       <div class="section__result" id="result"> </div>
@@ -125,15 +126,18 @@
 
   </main>
   
+  <!-- Footer -->
   <footer class="footer">
 
+    <!-- Equipo -->
     <ul class="footer__listgroup">
       <li class="footer__item ">Manuel Alfaro</li>
       <li class="footer__item">Javiera Córdova</li>
       <li class="footer__item">Valentina Roco</li>
       <li class="footer__item">Gabriela Soto</li>
     </ul>
-  
+
+    <!-- Fecha -->
     <div class="footer__date">
       <p class="footer__year" id="year"></p>
     </div>  
