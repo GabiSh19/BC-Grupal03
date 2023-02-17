@@ -65,9 +65,9 @@
     <img class="img section__img" src="./img/envios.svg" alt="Imagen de Somos">
     <h2 class="section__h2">Envíos</h2>
     <p class="section__p">Nuestros envíos son realizados a través de Chilexpress y
-       Starken, empaquetados firmemente para que tus productos
-       lleguen intactos y seguros a tu hogar. Puedes realizar
-       seguimientos para cada uno de tus envíos utilizando el código que te enviaremos a tu correo electrónico
+      Starken, empaquetados firmemente para que tus productos
+      lleguen intactos y seguros a tu hogar. Puedes realizar
+      seguimientos para cada uno de tus envíos utilizando el código que te enviaremos a tu correo electrónico
     </p>
   </section>
 
@@ -97,33 +97,28 @@
 <div class="wrapper--green">
   <section class="section">
     <h3 class="section__h3">¿Quieres más información?</h3>
-    <a class="button section__button" href="./formulario.html">
+    <button class="button button--primary" href="./formulario.html">
       ¡Hablemos!
-    </a>
+    </button>
   </section>
 </div>
     
 
     <section class="section">
       <h3 class="section__h3">Del 1 al 10 ¿Cómo evalúas nuestro servicio?</h3>
-      <div class="formulario">
-        <form id="inputrange">
-          <div id="rangeslider" data-role="rangeslider">
-            <input type="range" id="nota" min="0" max="10" value="10"
-              oninput="this.nextElementSibling.value = this.value">
-            <output>10</output>
-          </div>
-        </form>
-      </div>
-          <!--Calificación sin jQuery           
-          <div class="col-12 col-md-7 mx-auto">
-            <input type="text" id="nota" placeholder="Ingrese una calificación">
-          </div> -->
-          <div class="modificar">
-            <button onclick="calificar()">ENVIAR</button>
-          </div>
-          <div class="result " id="result"> </div>
-          <div class="numresult" id="numresult"> </div>
+        <!-- Calificación con Bootstrap  -->
+      <!-- <form class= "section__form"id="inputrange" >
+        <div id="rangeslider" data-role="rangeslider">
+          <input type="range" id="nota" min="0" max="10" value="10"
+            oninput="this.nextElementSibling.value = this.value">
+          <output>10</output>
+        </div>
+      </form> -->
+          <!-- Calificación sin jQuery -->
+      <input class = "section__input" type="text" id="qual" placeholder="Ingrese una calificación">
+      <button onclick="calificar()" class="button button--secondary">ENVIAR</button>
+      <div class="section__result" id="result"> </div>
+      <div class="section__numresult" id="numresult"> </div>
     </section>
 
   </main>

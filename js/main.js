@@ -40,8 +40,7 @@ fecha.textContent = fechaActual;
 // Funcion para calificar
 
 function calificar(){
-    let num = parseInt(document.getElementById("nota").value);
-
+    let num = parseInt(document.querySelector("#qual").value);
     let text;
     switch (true){
         case num>= 0 && num<3 :
@@ -67,13 +66,18 @@ function calificar(){
     }
     
     if (num >= 0 && num <= 10) { // Condicional para el texto
-        document.querySelector(".result").textContent= "Nuestro servicio está: " + text;
-        document.querySelector(".numresult").textContent = "Tu calificación fue de: " + num;
+        document.querySelector(".section__result").textContent= "Nuestro servicio está: " + text;
+        document.querySelector(".section__numresult").textContent = "Tu calificación fue de: " + num;
     } else { // Elimina el resultado anterior si se ingresa un número fuera del rango o algo que no sea un número
-        document.querySelector(".numresult").textContent = "";
-        document.querySelector(".result").textContent= "Ingrese un número válido";
+        document.querySelector(".section__numresult").textContent = "";
+        document.querySelector(".section__result").textContent= "Ingrese un número válido";
     }
 }
+
+
+
+//Función para animaciones 
+
 const scrollElements = document.querySelectorAll(".js-scroll");
 const elementInView = (el, dividend = 1) => {
     const elementTop = el.getBoundingClientRect().top;

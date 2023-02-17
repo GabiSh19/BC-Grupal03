@@ -19,7 +19,7 @@ body {
 
 input, textarea, button {
     all: unset;
-  }
+}
 
 img {
     max-width: 100%;
@@ -29,14 +29,47 @@ img {
 
 .button {
     display: block;
-    margin: 0 2em;
+    margin: 1em auto;
+    padding: 1em;
     text-align: center;
+    text-transform: uppercase;
     border-radius: 5px;
-    box-sizing: border-box;
+    border: 2px solid var(--green); 
+    font-size: 120%;
+    font-weight: 600;
+    letter-spacing: 1px;
+    width: 70%;
 }
 
- .wrapper--green {
+.button--primary{
+    color: var(--green);
+    border: 2px solid var(--green);
+}
+
+.button--secondary{
+    background: var(--green);
+    border: 2px solid var(--green);
+    color: white;
+}
+
+.button--primary:hover{
+    background-color: var(--green);
+    color: #ffff;
+}
+
+.button--secondary:hover{
     background-color: rgba(0, 175, 145, 0.1);
+    color: var(--green);
+}
+
+.wrapper--green {
+    background-color: rgba(0, 175, 145, 0.1);
+}
+
+.form__data{
+    display: flex;
+    align-items: center;
+    gap: 1em;
 }
 
 /* header */
@@ -62,10 +95,11 @@ align-items: center;
 }
 
 .header__title{
- color: var(--dark);
- font-weight: bold;
- font-size: 15px;
+color: var(--dark);
+font-weight: bold;
+font-size: 15px;
 }
+
 .header__logo{
     display: none;
 }
@@ -106,6 +140,8 @@ align-items: center;
 
 .section {
     padding: 4rem 2rem;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.7);
 }
 
 .section__img {
@@ -117,9 +153,9 @@ align-items: center;
 
 .section__h2, .section__h3 {
     padding-bottom: 1.5em;
-    text-align: center;
 }
-section h2::after {
+
+.section__h2::after {
     content: "";
     display: block;
     margin: 0 auto;
@@ -128,8 +164,10 @@ section h2::after {
     border-bottom: 5px solid var(--green);
 }
 
-.section__p {
-    text-align: center;
+.section__h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 1em 0;
 }
 
 /* Catalogo y Galeria */
@@ -142,6 +180,29 @@ section h2::after {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 5px;
+}
+
+/* Calificación */
+
+.section__input{
+    border-bottom: 2px solid var(--green);
+    font-size: 120%;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.section__result {
+    font-size: 120%;
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: 600;
+    margin: 1em;
+}
+
+.section__numresult {
+    font-size: 120%;    
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 1em;
 }
 
 /* Formulario */
@@ -163,15 +224,10 @@ section h2::after {
 }
 
 .form__button {
-    border: 2px solid var(--green);
     padding: 1em;
-    color: var(--green);
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 1px;
     width: 100%;
     margin: auto;
-
+    box-sizing: border-box;
 }
 
 /* Media Queries */
@@ -222,7 +278,7 @@ section h2::after {
 
     .section {
         max-width: 90%;
-        margin:  0 auto;
+        margin:  0 auto
     }
 
     .section__p, .section__h2, .section__h3 {
@@ -230,8 +286,12 @@ section h2::after {
         margin: auto;
     }
 
-    section h2::after {
+    .section__h2::after {
         width: 15%;
+    }
+
+    .button{
+        max-width: 50%;
     }
 
     .form {
@@ -274,8 +334,17 @@ section h2::after {
         text-align:left;
     }
 
+    .section__h2--responsiveleft::after{
+        margin: 0;
+        width: 2em;
+    }
+
     .section__p--responsiveleft {
         text-align:left;
+    }
+
+    .button{
+        max-width: 50%;
     }
 
     .form {
@@ -283,7 +352,7 @@ section h2::after {
     }
     
     .form__button {
-        max-width: 50%;
+        max-width: 50%
     }
 
 }
