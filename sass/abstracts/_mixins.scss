@@ -1,0 +1,25 @@
+@use '../abstracts/variables';
+@use '../abstracts/colors';
+
+
+
+@mixin border($px: 2px, $style: solid, $color: colors.$green) {
+    border: $px $style $color;
+}
+
+@mixin border-bottom($px:  1px, $style: solid, $color: colors.$green) {
+    border-bottom: $px $style $color;
+}
+
+@mixin button-setColor ($color,$background: unset) {
+    color: $color;
+    background-color: $background;
+}
+
+@mixin after-title{
+    content: "";
+    display: block;
+    margin: 0 auto;
+    padding-top: 1em;
+    border-bottom: 5px solid colors.$green;
+}
