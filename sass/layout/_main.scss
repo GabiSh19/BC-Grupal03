@@ -1,0 +1,113 @@
+//Importa variables y mixins de abstract
+@use '../abstracts/mixins';
+@use '../abstracts/variables';
+@use '../abstracts/colors';
+
+//Main Nesting
+
+    .section{
+        padding: 4rem 2rem;
+        text-align: center;
+        color: colors.$color-fontSection;
+        &__img{
+            padding-bottom: 2em;
+            max-width: 500px;
+            display: block;
+            margin: auto;
+        }
+        &__title{
+            padding-bottom: 1.5rem;
+            &::after{
+                @include mixins.after-title;
+                width: 30%;                
+            }
+        }
+        &__subtitle{
+            padding-bottom: 1.5rem;
+            font-size: variables.$font-subtitle;
+            font-weight: variables.$wfont-light;
+            margin: 1em 0;        
+        }
+        /* Calificación */
+        &__input{
+            @include mixins.border-bottom(2px);
+            color: colors.$color-fontSection;
+            font-size: variables.$font-S;
+        }
+        &__result{
+            font-size: variables.$font-L;
+            color: colors.$color-fontSection;
+            font-weight: variables.$wfont-medium;
+            margin: 1em;
+        }
+        &__numresult{
+            font-size: variables.$font-L;
+            color: colors.$color-fontSection;
+            font-weight: variables.$wfont-light;
+            letter-spacing: 1px;
+            margin-bottom: 1em;
+        }
+    }
+    /* Catálogo */
+    .catalog{
+        margin-bottom: 4em;
+    }
+
+/* Media Queries */
+
+/* Tablet 768px*/
+@media screen and (min-width: 768px){
+    .section{
+        max-width: 90%;
+        margin: 0 auto;
+        &__text,&__subtitle{
+            width: 80%;
+            margin: 0 auto;
+        }
+        &__title{
+            width: 80%;
+            margin: 0 auto;
+            &::after{
+                width: 15%;
+            }
+        }
+        &__input{
+            font-size: variables.$font-M;
+        }
+    }
+}
+
+
+// /* Desktop 1200px */
+
+@media screen and (min-width: 1200px){
+    .section{
+        max-width: 1200px;
+        &--2col{
+            padding: 4em 0;
+        }
+        &__text{
+            width: 60%;
+            &--responsiveleft{
+                text-align: left;
+            }
+        }
+        &__title{
+            width: 60%;
+            &--responsiveleft{
+                text-align: left;
+                &::after{
+                    margin: 0;
+                    width: 2em;
+                }
+            }
+        }
+        &__subtitle{
+            width: 60%;
+        }
+        &__input{
+            font-size: 120%;
+        }
+    }
+
+}
