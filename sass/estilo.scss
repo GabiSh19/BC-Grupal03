@@ -12,17 +12,22 @@
 @use 'base/reset';
 @use 'base/typography';
 
+@use 'components/buttons';
+@use 'components/images';
+@use 'components/wrapper';
+// @use 'components/carousel';
+// @use 'components/cover';
+// @use 'components/dropdown';
+
 @use 'layout/navigation';
 @use 'layout/grid';
 @use 'layout/header';
 @use 'layout/footer';
 @use 'layout/forms';
+@use 'layout/main';
 // @use 'layout/sidebar';
 
-@use 'components/buttons';
-// @use 'components/carousel';
-// @use 'components/cover';
-// @use 'components/dropdown';
+
 
 // @use 'pages/home';
 // @use 'pages/contact';
