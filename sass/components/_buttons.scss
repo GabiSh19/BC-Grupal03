@@ -1,0 +1,52 @@
+//Importa variables y mixins de abstract 
+@use '../abstracts/mixins';
+@use '../abstracts/variables';
+@use '../abstracts/colors';
+
+
+//Button Nesting
+
+.button{
+    display: block;
+    padding: 1em;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 5px;
+    @include mixins.border;
+    margin: 1em auto;
+    font-size: variables.$font-L;
+    font-weight: variables.$wfont-medium;
+    letter-spacing: 1px;
+    width: 100%;
+    box-sizing: border-box;
+    &--primary{
+        @include mixins.button-setColor(colors.$green);
+        @include mixins.border;
+        &:hover{
+            @include mixins.button-setColor(colors.$white,colors.$green);
+        }
+    }
+    &--secondary{
+        @include mixins.button-setColor(colors.$white,colors.$green);
+        @include mixins.border;
+        &:hover{
+            @include mixins.button-setColor(colors.$green,rgba(0, 175, 145, 0.1));
+        }
+    }
+}
+
+/* Media Queries */
+
+/* Tablet 768px*/
+@media screen and (min-width: 768px){
+    .button{
+        max-width: 50%;
+    }
+}
+
+/* Desktop 1200px */
+@media screen and (min-width: 1200px){
+    .button{
+        max-width: 50%;
+    }    
+}
