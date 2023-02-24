@@ -2,6 +2,7 @@
 
 @use 'abstracts/variables';
 // @use 'abstracts/functions';
+@use 'abstracts/colors';
 @use 'abstracts/mixins';
 // @use 'abstracts/placeholders';
 
@@ -15,8 +16,8 @@
 @use 'layout/grid';
 @use 'layout/header';
 @use 'layout/footer';
-// @use 'layout/sidebar';
 @use 'layout/forms';
+// @use 'layout/sidebar';
 
 @use 'components/buttons';
 // @use 'components/carousel';
@@ -27,4 +28,6 @@
 // @use 'pages/contact';
 
 // @use 'themes/theme';
+
 // @use 'themes/admin';
+
