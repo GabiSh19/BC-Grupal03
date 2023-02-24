@@ -24,6 +24,7 @@
         color: colors.$dark;
         &--active, &:hover{
             color: colors.$green;
+            cursor: pointer;
         }
         
     }
