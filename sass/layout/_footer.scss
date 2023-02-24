@@ -1,0 +1,60 @@
+//Importa variables y mixins de abstract 
+@use '../abstracts/mixins';
+@use '../abstracts/variables';
+@use '../abstracts/colors';
+
+//Footer Nesting
+
+.footer{
+    background-color: colors.$dark;
+    color: colors.$white;
+    font-weight: variables.$wfont-thin;
+    text-align: center;
+    padding-top: 3em;
+    flex-direction: column;
+    &__listgroup{
+        background-color: colors.$dark;
+        color: colors.$white;
+        font-weight: variables.$wfont-light;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 1em;
+    }
+    &__year{
+        color: colors.$green;
+        font-weight: variables.$wfont-bold;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        padding: 2em 0; 
+    }
+    &__item{
+        background-color: colors.$dark;
+        color: colors.$white;
+        font-weight: variables.$wfont-light;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+/* Media Queries */
+
+/* Tablet 768px*/
+@media screen and (min-width: 768px){
+    .footer__listgroup{
+        flex-direction: row;
+    }
+}
+
+/* Desktop 1200px*/
+
+@media screen and (min-width: 1200px){
+    .footer__year{
+        padding-bottom: 3em;
+    }
+}
+
