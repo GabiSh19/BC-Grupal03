@@ -1,0 +1,51 @@
+//Importa variables y mixins de abstract 
+@use '../abstracts/mixins';
+@use '../abstracts/variables';
+@use '../abstracts/colors';
+
+//Header Nesting
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @include mixins.border-bottom;
+    &__element{
+        margin: 1em;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    &__link{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    &__title{
+        color: colors.$dark;
+        font-weight: variables.$wfont-bold;
+        font-size: variables.$font-title;
+    }
+    &__logo{
+        display: none;
+    }
+    &__icon{
+        margin: 0px 15px 0px 0px;
+    }
+}
+
+/* Media Queries */
+
+/* Tablet 768px*/
+@media screen and (min-width: 768px){
+    .header{
+        justify-content: center;
+        border-bottom: none; 
+        &__logo{
+            display: block;
+            margin: 1.5em;
+        }
+        &__element{
+            display: none;
+        }
+    }
+}
