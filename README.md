@@ -3,6 +3,8 @@ Trabajo grupal de la tienda Cachureando, siguiendo los requerimientos semanales 
 
 # Requerimientos
 
+
+* v3.2 Implementa animaciones JS
 * v3.1 Implementa archivos SASS y Arquitectura 7-1
 * v3.0 Incorpora BEM
 * v2.0 [Puede ser revisada aquí](https://github.com/ManuDve/BC-Grupal02)
