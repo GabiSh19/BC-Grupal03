@@ -11,11 +11,12 @@
   <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
   <link rel="manifest" href="./img/favicon/site.webmanifest">
 <!-- Google Fonts -->
- <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
 <!-- JS -->
-<script src="./js/main.js" defer></script>
+  <script src="./js/main.js" defer></script>
+  <script src="./js/qualify.js" defer></script>
 </head>
 
 <body>
@@ -63,7 +64,7 @@
     </section>
 
     <!--     Envios -->
-    <div class="wrapper--green">
+    <div class="wrapper--green js-scroll fade-in-bottom">
       <section class="section">
         <img class="img section__img" src="./img/envios.svg" alt="Imagen de Somos">
         <h2 class="section__title">Envíos</h2>
@@ -79,7 +80,7 @@
     <section class="section section--2col">
 
         <!-- columna texto -->
-        <div class="catalogo">
+        <div class="catalog js-scroll slide-left">
           <h2 class="section__title section__title--responsiveleft">Catálogo</h2>
           <p class="section__text section__text--responsiveleft">Echa un vistazo a nuestros productos principales, elaborados utilizando procesos sustentables y manuales,
               con materiales de alta calidad que garantizan duración, excelencia. Con estilos que no encontrarás en
@@ -87,18 +88,18 @@
         </div>
 
         <!-- columna fotos -->
-        <div class="galeria">
-                <img src="./img/p01.jpg" class="img galeria__img" alt="Producto 01">
-                <img src="./img/p02.jpg" class="img galeria__img" alt="Producto 02">              
-                <img src="./img/p03.jpg" class="img galeria__img" alt="Producto 03">
-                <img src="./img/p04.jpg" class="img galeria__img" alt="Producto 04">
-            </div>
-        </div>
+        <div class="galeria js-scroll slide-right">
+            <img src="./img/p01.jpg" class="img galeria__img" alt="Producto 01">
+            <img src="./img/p02.jpg" class="img galeria__img" alt="Producto 02">              
+            <img src="./img/p03.jpg" class="img galeria__img" alt="Producto 03">
+            <img src="./img/p04.jpg" class="img galeria__img" alt="Producto 04">
+          </div>
     </section>
 
-<div class="wrapper--green">
+<!-- Contacto -->
+<div class="wrapper--green js-scroll fade-in-bottom">
   <section class="section">
-      <h3 class="section__h3">¿Quieres más información?</h3>
+      <h3 class="section__subtitle">¿Quieres más información?</h3>
       <a class="button button--primary" href="./formulario.html">
         ¡Hablemos!
       </a>
@@ -106,22 +107,17 @@
 </div>
     
 <!-- Calificacion -->
-    <section class="section">
-      <h3 class="section__subtitle">Del 1 al 10 ¿Cómo evalúas nuestro servicio?</h3>
-        <!-- Calificación con Bootstrap  -->
-      <!-- <form class= "section__form"id="inputrange" >
-        <div id="rangeslider" data-role="rangeslider">
-          <input type="range" id="nota" min="0" max="10" value="10"
-            oninput="this.nextElementSibling.value = this.value">
-          <output>10</output>
-        </div>
-      </form> -->
-
+    <section class="section js-scroll fade-in-bottom">
+      <h3 class="section__subtitle">Del 1 al 10 ¿Cómo evalúas nuestro servicio?</h3> 
+      <form class="section__qualification"> 
+        <input id="myinput" type="range" min="0" max="10" step="1" value="10" placeholder="10"/>
+        <output id="value"></output>
+      </form>
       <!-- Calificación sin jQuery -->
-      <input class = "section__input" type="text" id="qual" placeholder="Ingrese una calificación">
-      <button onclick="calificar()" class="button button--secondary">ENVIAR</button>
+      <!-- <input class = "section__input" type="text" id="qual" placeholder="Ingrese una calificación"> -->
+      <button onclick="qualification()" class="button button--secondary">ENVIAR</button>
       <div class="section__result" id="result"> </div>
-      <div class="section__numresult" id="numresult"> </div>
+      <div class="section__numresult" id="numresult"> </div >
     </section>
 
   </main>
@@ -130,12 +126,28 @@
   <footer class="footer">
 
     <!-- Equipo -->
-    <ul class="footer__listgroup">
-      <li class="footer__item ">Manuel Alfaro</li>
-      <li class="footer__item">Javiera Córdova</li>
-      <li class="footer__item">Valentina Roco</li>
-      <li class="footer__item">Gabriela Soto</li>
-    </ul>
+    <div class="team">
+      <ul class="footer__listgroup">
+        <li class="footer__item ">Manuel Alfaro</li>
+        <li class="footer__item">Javiera Córdova</li>
+        <li class="footer__item">Valentina Roco</li>
+        <li class="footer__item">Gabriela Soto</li>
+      </ul>
+  
+      <!-- Redes sociales -->
+      <div class="footer_socialMedia">
+        <a href="https://www.instagram.com/">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>  
+        <a href="https://www.facebook.com/">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a>    
+        <a href="https://twitter.com/?lang=es">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a>
+      </div>
+    </div>
+
 
     <!-- Fecha -->
     <div class="footer__date">
@@ -147,6 +159,10 @@
   <!-- Link JS jQuery -->
   <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
   <script src="./js/jquery.goup.js"></script>
+
+  <!-- Link iconografía redes sociales -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

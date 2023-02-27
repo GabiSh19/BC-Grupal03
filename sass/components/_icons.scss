@@ -1,0 +1,19 @@
+//Importa colores y variables de abstract 
+@use '../abstracts/colors';
+@use '../abstracts/variables';
+
+
+ion-icon {  
+    font-size: variables.$font-M;
+    border: 2px solid colors.$green;
+    border-radius: 5px; 
+    color: colors.$white;
+    font-weight: variables.$wfont-bold;
+    padding: .4em;
+    margin: 2em .5em;
+    &:hover{
+        color: colors.$green;
+        cursor: pointer;
+    }
+}
+

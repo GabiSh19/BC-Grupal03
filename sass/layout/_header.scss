@@ -1,9 +1,11 @@
-//Importa variables y mixins de abstract 
+//Importa mixins, variables y colores de abstract 
+
 @use '../abstracts/mixins';
 @use '../abstracts/variables';
 @use '../abstracts/colors';
 
 //Header Nesting
+
 .header{
     display: flex;
     flex-direction: row;
@@ -36,6 +38,7 @@
 /* Media Queries */
 
 /* Tablet 768px*/
+
 @media screen and (min-width: 768px){
     .header{
         justify-content: center;

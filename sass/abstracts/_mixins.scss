@@ -1,7 +1,9 @@
+//Importa variables y colores de abstract 
+
 @use '../abstracts/variables';
 @use '../abstracts/colors';
 
-
+//Mixins
 
 @mixin border($px: 2px, $style: solid, $color: colors.$green) {
     border: $px $style $color;

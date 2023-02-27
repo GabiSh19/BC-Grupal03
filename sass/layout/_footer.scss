@@ -1,26 +1,25 @@
-//Importa variables y mixins de abstract 
+//Importa mixins, variables y colores de abstract 
+
 @use '../abstracts/mixins';
 @use '../abstracts/variables';
 @use '../abstracts/colors';
 
-//Footer Nesting
+//Footer Nesting 
 
 .footer{
-    background-color: colors.$dark;
-    color: colors.$white;
+    background-color: colors.$dark; 
     font-weight: variables.$wfont-thin;
     text-align: center;
-    padding-top: 3em;
+    padding: 2em 0;
     flex-direction: column;
     &__listgroup{
-        background-color: colors.$dark;
-        color: colors.$white;
-        font-weight: variables.$wfont-light;
         display: flex;
         flex-direction: column;
         justify-content: center;
         text-align: center;
         gap: 1em;
+        color: colors.$white;
+        font-weight: variables.$wfont-light;
     }
     &__year{
         color: colors.$green;
@@ -28,25 +27,22 @@
         display: flex;
         text-align: center;
         justify-content: center;
-        padding: 2em 0; 
     }
-    &__item{
-        background-color: colors.$dark;
-        color: colors.$white;
-        font-weight: variables.$wfont-light;
-        justify-content: center;
-        text-align: center;
-        display: flex;
-        flex-direction: row;
-    }
+    
 }
 
 /* Media Queries */
 
 /* Tablet 768px*/
+
 @media screen and (min-width: 768px){
     .footer__listgroup{
         flex-direction: row;
+    }
+    .team{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
     }
 }
 
@@ -55,6 +51,9 @@
 @media screen and (min-width: 1200px){
     .footer__year{
         padding-bottom: 3em;
+    }
+    .footer__item{
+        margin: 0 1.5em;
     }
 }
 
