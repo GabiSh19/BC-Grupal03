@@ -5,6 +5,7 @@
 @use 'abstracts/colors';
 @use 'abstracts/mixins';
 // @use 'abstracts/placeholders';
+@use 'abstracts/animations';
 
 @use 'vendors/bootstrap';
 // @use 'vendors/jquery-ui';
@@ -13,11 +14,13 @@
 @use 'base/typography';
 
 @use 'components/buttons';
+@use 'components/icons';
 @use 'components/images';
 @use 'components/wrapper';
 // @use 'components/carousel';
 // @use 'components/cover';
 // @use 'components/dropdown';
+@use 'components/inputRange';
 
 @use 'layout/navigation';
 @use 'layout/grid';

@@ -1,0 +1,38 @@
+#myinput {
+    all: unset;
+    border-radius: 8px;
+    height: 10px;
+    width: 75%;
+    transition: 450ms ease-in;   
+    margin: 0 1em 1em 0;
+    background: linear-gradient(to right, rgb(0, 173, 145) 0%, rgb(0, 173, 145) 100%, rgb(255, 255, 255) 50%, white 100%);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; 
+    background-color: #3f3f3f;
+    height: 1em;
+    width: 1em;
+    border-radius: 50%;    
+}
+
+#value{
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+/* Media Queries */
+
+/* Tablet 768px*/
+@media screen and (min-width: 768px){
+    #myinput{
+        width: 280px;
+    }
+}
+
+/* Desktop 1200px*/
+@media screen and (min-width: 1200px){
+    #myinput{
+        width: 350px;
+    }
+}

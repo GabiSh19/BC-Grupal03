@@ -38,45 +38,6 @@ fecha.textContent = fechaActual;
 }, 1000)
 
 
-// Funcion para calificar
-
-function calificar(){
-    let num = parseInt(document.querySelector("#qual").value);
-    let text;
-    switch (true){
-        case num>= 0 && num<3 :
-            text = "Muy deficiente";
-            break;
-        case num>= 3 && num<5:
-            text = "Insuficiente";
-            break; 
-        case num>= 5 && num<6:
-            text = "Suficiente" ;
-            break; 
-        case num>= 6 && num<7:
-            text = "Bien";
-            break; 
-        case num>= 7 && num<9:
-            text = "Notable";
-            break; 
-        case num>= 9 && num<=10:
-            text = "Sobresaliente";
-            break;   
-        default: 
-            text = "Ingrese un número válido";
-    }
-    
-    if (num >= 0 && num <= 10) { // Condicional para el texto
-        document.querySelector(".section__result").textContent= "Nuestro servicio está: " + text;
-        document.querySelector(".section__numresult").textContent = "Tu calificación fue de: " + num;
-    } else { // Elimina el resultado anterior si se ingresa un número fuera del rango o algo que no sea un número
-        document.querySelector(".section__numresult").textContent = "";
-        document.querySelector(".section__result").textContent= "Ingrese un número válido";
-    }
-}
-
-
-
 //Función para animaciones 
 
 const scrollElements = document.querySelectorAll(".js-scroll");

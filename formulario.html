@@ -64,14 +64,14 @@
                 <input id="form-email" class="form__input" type="email" placeholder="Email">
                 <input id="form-phone" class="form__input" type="text" placeholder="Teléfono">
                 <textarea id="form-text" class="form__textarea" rows="3" placeholder="Escribe aquí tu comentario"></textarea>
-                <button id="form-submit" type="submit" name="submit" class="button form__button button--primary">Enviar
+                <button id="form-submit" type="submit" name="submit" class="button form__button button--primary js-scroll fade-in">Enviar
                 <ion-icon name="send-outline" class="form__icon" role="img" aria-label="send outline"></ion-icon>
                 </button>
             </div>        
         </section>
 
 <!--  Mapa -->
-        <div class="wrapper--green">
+        <div class="wrapper--green js-scroll fade-in-bottom">
             <section class="section">
                 <h2 class="section__title">Ubicación</h2>
                 <p class="section__text">Puedes encontrarnos en:</p>
@@ -86,23 +86,41 @@
 
     </main>
 
-<!-- Footer -->
-    <footer class="footer">
+  <!-- Footer -->
+  <footer class="footer">
 
+    <!-- Equipo -->
+    <div class="team">
       <ul class="footer__listgroup">
         <li class="footer__item ">Manuel Alfaro</li>
         <li class="footer__item">Javiera Córdova</li>
         <li class="footer__item">Valentina Roco</li>
         <li class="footer__item">Gabriela Soto</li>
       </ul>
-    
-      <div class="footer__date">
-        <p class="footer__year" id="year"></p>
-      </div>  
   
-    </footer>
+      <!-- Redes sociales -->
+      <div class="footer_socialMedia">
+        <a href="https://www.instagram.com/">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>  
+        <a href="https://www.facebook.com/">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a>    
+        <a href="https://twitter.com/?lang=es">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a>
+      </div>
+    </div>
+
+
+    <!-- Fecha -->
+    <div class="footer__date">
+      <p class="footer__year" id="year"></p>
+    </div>  
+
+  </footer>
   
-<!-- Link iconografia botones -->
+    <!-- Link iconografia botones -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <!-- Link JS jQuery -->

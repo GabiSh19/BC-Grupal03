@@ -1,4 +1,5 @@
-//Importa variables y mixins de abstract 
+//Importa mixins, variables y colores de abstract 
+
 @use '../abstracts/mixins';
 @use '../abstracts/variables';
 @use '../abstracts/colors';
@@ -19,11 +20,15 @@
     letter-spacing: 1px;
     width: 100%;
     box-sizing: border-box;
+    cursor: pointer;
     &--primary{
         @include mixins.button-setColor(colors.$green);
         @include mixins.border;
         &:hover{
             @include mixins.button-setColor(colors.$white,colors.$green);
+            ion-icon{
+                color: colors.$white;
+            }
         }
     }
     &--secondary{
