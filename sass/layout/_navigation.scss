@@ -7,15 +7,23 @@
 //Nav Nesting
 
 .nav{
+    height: 3em;
+    background-color: colors.$white;
     &__list{
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;  
+        background-color: colors.$white;
         &--hide{
             display: none;
         }
         &--show{
             display: flex;
+            background-color: colors.$white;
+            position: fixed;
+            z-index: 999;
+            width: 100%;
+            transform: translateY(60px);;
         }
     }
     &__item{
@@ -38,13 +46,19 @@
 
 @media screen and (min-width: 768px){
     .nav{
+        height: 3.5em;
         @include mixins.border-bottom;
         padding: 15px 0px;
+        top: 10em;
+        width: 100%;
+        z-index: 900;
         &__list{
             flex-direction: row;
             justify-content: center;
             &--hide{
                 display: flex;
+                background-color: colors.$white;
+                top: 7em;
             }
         }
         &__item{
@@ -52,7 +66,7 @@
         }
         &__link{
             color: colors.$dark;
-            &--active{
+            &--active,&:hover{
                 color: colors.$green;
             }
         }

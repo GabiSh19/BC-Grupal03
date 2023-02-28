@@ -81,3 +81,20 @@ const elementInView = (el, dividend = 1) => {
   });
 
 
+  // Nav fixed 
+
+ let nav = document.getElementById("navFixed");
+ let navPosition = nav.offsetTop;
+ let ancho = window.innerWidth;
+
+  window.addEventListener("scroll", () => {
+    if (window.pageYOffset >= navPosition & ancho>768) {
+      nav.style.position = "fixed";
+      nav.style.top = "0";
+      nav.style.width = "100%";
+    
+  }
+  else{
+    nav.style.position = "static";
+  }
+  })

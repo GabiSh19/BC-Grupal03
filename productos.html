@@ -16,7 +16,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
   <!-- JS -->
     <script src="./js/main.js" defer></script>
-    <script src="./js/qualify.js" defer></script>
 </head>
 
 <body>
@@ -36,13 +35,16 @@
   </header>
   
   <!--  nav -->
-  <nav class="nav" role="navigation">
+  <nav class="nav" role="navigation" id="navFixed">
       <ul class="nav__list nav__list--hide" id="menu">
         <li class="nav__item">
-          <a class="nav__link--active" aria-current="page" href="#">Inicio</a>
+          <a class="nav__link" aria-current="page" href="./index.html">Inicio</a>
         </li>
         <li class="nav__item">
           <a class="nav__link" href="./index.html#quienessomos">Somos</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link--active" href="./productos.html">Productos</a>
         </li>
         <li class="nav__item">
           <a class="nav__link" href="./formulario.html">Contacto</a>
@@ -51,7 +53,7 @@
   </nav>
 
 <!-- main   -->
-<main>
+<main class="section">
   <section class="section">
     <h2 class="section__title">Nuestros Productos</h2>
     <p class="section__text">Explora aquí todo nuestro catálogo de productos. Si no encuentras lo que buscas, escríbenos en nuestra sección de Contacto ;) </p>

@@ -11,6 +11,11 @@
     flex-direction: row;
     justify-content: space-between;
     @include mixins.border-bottom;
+    position: fixed;
+    background-color: colors.$white;
+    height: 4em;
+    width: 100%;
+    z-index: 500;
     &__element{
         margin: 1em;
         display: flex;
@@ -41,6 +46,8 @@
 
 @media screen and (min-width: 768px){
     .header{
+        height: 10em;
+        position: static;
         justify-content: center;
         border-bottom: none; 
         &__logo{
