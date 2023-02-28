@@ -1,0 +1,26 @@
+@use '../abstracts/variables';
+
+.card {
+    &__row{
+        margin: 0rem 2rem 2rem;
+    }
+
+    &__name{
+        font-size: variables.$font-M;
+        font-weight: variables.$wfont-medium;
+        text-align: center;
+    }
+
+    &__description{
+        font-size: variables.$font-xS;
+        font-weight: variables.$wfont-thin;
+        text-align: center;
+    }
+
+    &__end{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        }
+
+}

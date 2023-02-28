@@ -7,8 +7,7 @@
 // @use 'abstracts/placeholders';
 @use 'abstracts/animations';
 
-@use 'vendors/bootstrap';
-// @use 'vendors/jquery-ui';
+
 
 @use 'base/reset';
 @use 'base/typography';
@@ -17,6 +16,8 @@
 @use 'components/icons';
 @use 'components/images';
 @use 'components/wrapper';
+@use 'components/cards';
+
 // @use 'components/carousel';
 // @use 'components/cover';
 // @use 'components/dropdown';
@@ -28,6 +29,8 @@
 @use 'layout/footer';
 @use 'layout/forms';
 @use 'layout/main';
+
+
 // @use 'layout/sidebar';
 
 
@@ -39,3 +42,5 @@
 
 // @use 'themes/admin';
 
+@import 'vendors/bootstrap';
+// @use 'vendors/jquery-ui';
