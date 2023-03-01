@@ -3,6 +3,7 @@ Trabajo grupal de la tienda Cachureando, siguiendo los requerimientos semanales 
 
 # Requerimientos
 
+* v3.4 Implementa Carousel
 * v3.3 Implementa funcionalidad fixed al Nav
 * v3.2 Implementa animaciones JS
 * v3.1 Implementa archivos SASS y Arquitectura 7-1

@@ -17,6 +17,7 @@
 <!-- JS -->
   <script src="./js/main.js" defer></script>
   <script src="./js/qualify.js" defer></script>
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js" defer></script>
 </head>
 
 <body>
@@ -50,6 +51,27 @@
       </ul>
   </nav>    
 </header>
+
+<!-- Carousel -->
+
+<section id="carousel" class="carousel  slide" data-bs-ride="carousel" >
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="./img/c01.jpg" alt="">
+    </div>
+    <div class="carousel-item"><img class="d-block w-100" src="./img/c02.jpg" alt=""></div>
+    <div class="carousel-item"><img class="d-block w-100" src="./img/c03.jpg" alt=""></div>
+    <div class="carousel-item"><img class="d-block w-100" src="./img/c04.jpg" alt=""></div>
+  </div>
+
+
+</section>
 
 <!-- Main -->
   <main>
@@ -85,7 +107,10 @@
           <h2 class="section__title section__title--responsiveleft">Catálogo</h2>
           <p class="section__text section__text--responsiveleft">Echa un vistazo a nuestros productos principales, elaborados utilizando procesos sustentables y manuales,
               con materiales de alta calidad que garantizan duración, excelencia. Con estilos que no encontrarás en
-              otras tiendas. Si deseas personalizar tus productos, no dudes en contactarnos.</p>
+              otras tiendas. Si deseas personalizar tus productos, no dudes en contactarnos.
+            </p>
+              
+            <a href="./productos.html" class="button--secondary button--card button--catalog">Conoce nuestros productos</a>
         </div>
 
         <!-- columna fotos -->
