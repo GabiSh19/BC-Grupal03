@@ -2,8 +2,11 @@
 
 let list =document.getElementById("menu");
 let button=document.getElementById("burger");
+let ancho = window.innerWidth;
+
 function toggle() {
-  list.classList.toggle("nav__list--show");
+  list.classList.toggle('header__list--show');
+  list.classList.toggle('header__list--hide');
 }
 
 button.addEventListener("click",toggle);
@@ -81,3 +84,20 @@ const elementInView = (el, dividend = 1) => {
   });
 
 
+  //Nav fixed
+let nav = document.querySelector('.navFix');
+let navPosition = nav.offsetTop;
+  
+window.addEventListener('resize', () => {    
+  ancho = window.innerWidth;     
+})
+    
+window.addEventListener('scroll', () => {
+  if ((window.pageYOffset >= navPosition) & (ancho >= 768)) {
+    nav.classList.remove('header__nav');
+    nav.classList.add('header__fix');
+  } else {
+    nav.classList.add('header__nav');
+    nav.classList.remove('header__fix');
+  }
+});
